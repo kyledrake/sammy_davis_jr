@@ -1,10 +1,11 @@
-$KCODE = "UTF8"
 require 'rubygems'
-require 'jcode'
-require 'unicode'
+
+# Enable to be worldly.
+# $KCODE = "UTF8"
+# require 'jcode'
+# require 'unicode'
+
 require 'rack'
-#require 'rack/contrib'
-#require 'rack-flash'
 require 'sinatra/base'
 require 'app_helpers'
 require 'dm-core'
