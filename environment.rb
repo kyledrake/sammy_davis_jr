@@ -6,6 +6,7 @@ require 'rubygems'
 # require 'unicode'
 
 require 'rack'
+require 'erubis'
 require 'sinatra/base'
 require 'app_helpers'
 require 'dm-core'
