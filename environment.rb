@@ -6,9 +6,12 @@ require 'rubygems'
 # require 'unicode'
 
 require 'rack'
-require 'erubis'
 require 'sinatra/base'
+require 'app'
 require 'app_helpers'
+require File.expand_path(File.join(File.dirname(__FILE__), 'vendor', 'gems', 'environment'))
+Bundler.require_env
+
 require 'dm-core'
 require 'dm-validations'
 
@@ -27,7 +30,7 @@ when 'development'
   ACCESS_LOG = STDOUT
   
   DataMapper::Logger.new(STDOUT, :debug)
-  DataMapper.setup(:default, 'postgres://user:pass@localhost/database')
+  DataMapper.setup(:default, 'mysql://user:pass@localhost/database')
   
 when 'production'
   puts 'Starting in production mode..'
@@ -36,9 +39,21 @@ when 'production'
   STDOUT.reopen APP_LOG
   STDERR.reopen APP_LOG
   
-  DataMapper.setup(:default, 'postgres://user:pass@localhost/database')
+  DataMapper.setup(:default, 'mysql://user:pass@localhost/database')
   
 else
   raise 'Configuration not found for this environment.'
 end
 
+Sinatra::Base.use Rack::ShowExceptions if ENV['RACK_ENV'] == 'development'
+Sinatra::Base.use Rack::MethodOverride
+Sinatra::Base.use Rack::Session::Cookie, :key => 'app.session',
+                           :path => '/',
+                           :expire_after => 2592000, # In seconds
+                           :secret => 'PUT_SOMETHING_HERE'
+
+Sinatra::Base.set :static, true
+Sinatra::Base.set :root, File.expand_path(File.dirname(__FILE__))
+Sinatra::Base.set :public, File.join(Sinatra::Base.root, 'static')
+Sinatra::Base.set :dump_errors, true
+Sinatra::Base.helpers Sinatra::AppHelpers

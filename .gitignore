@@ -1,2 +1,4 @@
 logs/*
-!.gitignore
+.gitignore
+vendor
+bin
