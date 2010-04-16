@@ -30,6 +30,7 @@ else
   raise 'Configuration not found for this environment.'
 end
 
+Tilt.register 'erb', Tilt::ErubisTemplate
 Sinatra::Base.use Rack::ShowExceptions if ENV['RACK_ENV'] == 'development'
 Sinatra::Base.use Rack::MethodOverride
 Sinatra::Base.use Rack::Session::Cookie, :key => 'app.session',
