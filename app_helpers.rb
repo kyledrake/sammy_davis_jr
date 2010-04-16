@@ -1,7 +1,7 @@
 module Sinatra
   module AppHelpers
     def h(text)
-      Rack::Utils.escape_html(text)
+      Rack::Utils.escape_html text
     end
     
     def onclick_delete(msg='Are you sure?')
