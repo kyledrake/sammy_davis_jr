@@ -3,5 +3,5 @@
 require 'environment'
 
 map '/' do
-  run App
+  run Controller
 end
