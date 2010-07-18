@@ -1,4 +1,4 @@
-class App < Sinatra::Base
+class Controller < Sinatra::Base
   
   get '/' do
     erb :index

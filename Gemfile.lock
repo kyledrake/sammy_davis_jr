@@ -1,0 +1,122 @@
+--- 
+dependencies: 
+  mongrel: 
+    group: 
+    - :default
+    version: = 1.1.5
+  contest: 
+    group: 
+    - :default
+    version: = 0.1.2
+  dm-mysql-adapter: 
+    group: 
+    - :default
+    version: = 1.0.0
+  data_mapper: 
+    group: 
+    - :default
+    version: = 1.0.0
+  rack: 
+    group: 
+    - :default
+    version: = 1.2.1
+  sinatra: 
+    group: 
+    - :default
+    version: = 1.0
+  json: 
+    group: 
+    - :default
+    version: = 1.4.3
+  rainbows: 
+    group: 
+    - :default
+    version: = 0.95.1
+  dm-sweatshop: 
+    group: 
+    - :default
+    version: = 1.0.0
+  rack-test: 
+    group: 
+    - :default
+    version: = 0.5.4
+specs: 
+- ZenTest: 
+    version: 4.3.3
+- RubyInline: 
+    version: 3.8.4
+- sexp_processor: 
+    version: 3.0.4
+- ParseTree: 
+    version: 3.0.5
+- addressable: 
+    version: 2.1.2
+- cgi_multipart_eof_fix: 
+    version: 2.5.0
+- contest: 
+    version: 0.1.2
+- daemons: 
+    version: 1.1.0
+- extlib: 
+    version: 0.9.15
+- dm-core: 
+    version: 1.0.0
+- dm-aggregates: 
+    version: 1.0.0
+- dm-migrations: 
+    version: 1.0.0
+- dm-constraints: 
+    version: 1.0.0
+- fastercsv: 
+    version: 1.5.3
+- json_pure: 
+    version: 1.4.3
+- dm-serializer: 
+    version: 1.0.0
+- dm-timestamps: 
+    version: 1.0.0
+- dm-transactions: 
+    version: 1.0.0
+- stringex: 
+    version: 1.1.0
+- uuidtools: 
+    version: 2.1.1
+- dm-types: 
+    version: 1.0.0
+- dm-validations: 
+    version: 1.0.0
+- data_mapper: 
+    version: 1.0.0
+- data_objects: 
+    version: 0.10.2
+- dm-do-adapter: 
+    version: 1.0.0
+- do_mysql: 
+    version: 0.10.2
+- dm-mysql-adapter: 
+    version: 1.0.0
+- randexp: 
+    version: 0.1.5
+- dm-sweatshop: 
+    version: 1.0.0
+- fastthread: 
+    version: 1.0.7
+- gem_plugin: 
+    version: 0.2.3
+- json: 
+    version: 1.4.3
+- mongrel: 
+    version: 1.1.5
+- rack: 
+    version: 1.2.1
+- rack-test: 
+    version: 0.5.4
+- unicorn: 
+    version: 1.1.2
+- rainbows: 
+    version: 0.95.1
+- sinatra: 
+    version: "1.0"
+hash: b1dabd7403d75debb4433e40ce17788eae98e67f
+sources: []
+
