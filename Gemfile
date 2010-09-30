@@ -1,11 +1,10 @@
-source :rubygems
+source "http://rubygems.org"
 gem 'rack',             '1.2.1'
-gem 'sinatra',          '1.0'
+gem 'sinatra',          '1.0', :require => 'sinatra/base'
 gem 'json',             '1.4.3'
-gem 'data_mapper',      '1.0.0'
-gem 'dm-mysql-adapter', '1.0.0'
-gem 'mongrel',          '1.1.5'
-gem 'rainbows',         '0.95.1'
+gem 'data_mapper',      '1.0.2'
+gem 'dm-mysql-adapter', '1.0.2'
+gem 'dm-sweatshop',     '1.0.2'
+gem 'rainbows',         '0.97.0'
 gem 'contest',          '0.1.2'
-gem 'rack-test',        '0.5.4'
-gem 'dm-sweatshop',     '1.0.0'
+gem 'rack-test',        '0.5.6'
