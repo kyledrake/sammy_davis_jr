@@ -1,10 +1,10 @@
 source "http://rubygems.org"
 gem 'rack',             '1.2.1'
-gem 'sinatra',          '1.0', :require => 'sinatra/base'
-gem 'json',             '1.4.3'
+gem 'sinatra',          '1.1.0', :require => 'sinatra/base'
+gem 'yajl-ruby',        '0.7.8'
 gem 'data_mapper',      '1.0.2'
 gem 'dm-mysql-adapter', '1.0.2'
 gem 'dm-sweatshop',     '1.0.2'
-gem 'rainbows',         '0.97.0'
+gem 'rainbows',         '1.0.0'
 gem 'contest',          '0.1.2'
 gem 'rack-test',        '0.5.6'
