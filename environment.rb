@@ -1,43 +1,33 @@
-$KCODE = "UTF8"
-require 'bundler'
-Bundler.setup
-require 'jcode'
-require 'rack'
-require 'sinatra/base'
-require 'controller'
-require 'helpers'
-require 'dm-core'
-require 'dm-validations'
-require 'dm-migrations'
-require 'dm-timestamps'
+require 'rubygems'
+Bundler.require
+require File.join(File.expand_path(File.dirname(__FILE__)), 'controller.rb')
+require File.join(File.expand_path(File.dirname(__FILE__)), 'helpers.rb')
+Dir.glob(['lib', 'models'].map! {|d| File.join File.expand_path(File.dirname(__FILE__)), d, '*.rb'}).each {|f| require f}
 
-Dir.glob([File.join('lib', '*.rb'), File.join('models', '*.rb')]).each { |f| require f }
+puts "Starting in #{Sinatra::Base.environment} mode.."
 
-ENV['RACK_ENV'] ||= 'development'
-
-puts "Starting in #{ENV['RACK_ENV']} mode.."
-
-case ENV['RACK_ENV']
-when 'development'
+case Sinatra::Base.environment
+when :development
   DataMapper::Logger.new STDOUT, :debug
   DataMapper.setup :default, 'mysql://user:pass@localhost/database_dev'
-when 'test'
+when :test
+  DataMapper.logger.level = :off
   DataMapper.setup :default, 'mysql://user:pass@localhost/database_test'
-when 'production'
+when :production
   DataMapper.setup :default, 'mysql://user:pass@localhost/database'
 else
   raise 'Configuration not found for this environment.'
 end
 
-Sinatra::Base.use Rack::ShowExceptions if ENV['RACK_ENV'] == 'development'
+Sinatra::Base.use Rack::ShowExceptions if Sinatra::Base.development?
 Sinatra::Base.use Rack::MethodOverride
-Sinatra::Base.use Rack::Session::Cookie, :key => 'app.session',
-                           :path => '/',
-                           :expire_after => 2592000, # In seconds
-                           :secret => 'PUT_SOMETHING_HERE'
-
+Sinatra::Base.use Rack::Session::Cookie, :key => 'sammy.session',
+                                         :path => '/',
+                                         :expire_after => 2592000, # In seconds
+                                         :secret => 'PUT_SOMETHING_HERE'
 Sinatra::Base.set :static, true
 Sinatra::Base.set :root, File.expand_path(File.dirname(__FILE__))
 Sinatra::Base.set :public, File.join(Sinatra::Base.root, 'static')
 Sinatra::Base.set :dump_errors, true
 Sinatra::Base.helpers Helpers
+Sinatra::Base.register Sinatra::Namespace

@@ -1,11 +1,11 @@
-require File.join 'tests', 'environment.rb'
+require File.join File.expand_path(File.dirname(__FILE__)), 'environment.rb'
 
 class AppTests < Test::Unit::TestCase
-  
+
   def app
     Controller
   end
-  
+
   context 'the index' do
     test 'loads correctly' do
       get '/'
@@ -13,5 +13,5 @@ class AppTests < Test::Unit::TestCase
       assert last_response.body.length > 0
     end
   end
-  
+
 end
