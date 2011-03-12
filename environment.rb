@@ -16,7 +16,7 @@ when :test
 when :production
   DataMapper.setup :default, 'mysql://user:pass@localhost/database'
 else
-  raise 'Configuration not found for this environment.'
+  raise "Configuration not found for this environment: #{Sinatra::Base.environment}"
 end
 
 Sinatra::Base.use Rack::ShowExceptions if Sinatra::Base.development?

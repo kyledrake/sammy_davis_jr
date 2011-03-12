@@ -1,6 +1,6 @@
 require File.join File.expand_path(File.dirname(__FILE__)), 'environment.rb'
 
-class AppTests < Test::Unit::TestCase
+class ControllerTests < Test::Unit::TestCase
 
   def app
     Controller

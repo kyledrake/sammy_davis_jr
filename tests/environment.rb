@@ -1,4 +1,4 @@
-ENV['RACK_ENV'] =  (ARGV && ARGV[0]) ? ARGV[0] : 'test'
+ENV['RACK_ENV'] = 'test'
 raise 'Forget it.' if ENV['RACK_ENV'] == 'production'
 require File.join(File.expand_path(File.dirname(__FILE__)), '..', 'environment.rb')
 require 'test/unit'
