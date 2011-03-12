@@ -33,6 +33,10 @@ Getting Started in One Minute
 
 5) Start the server:
 
+    For development:
+    $ bundle exec shotgun
+    
+    For production:
     $ bundle exec rainbows
 
 That's it! Hit the app with your browser and you should see the stubbed index route.
