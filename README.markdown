@@ -18,23 +18,25 @@ Highlights
 Getting Started in One Minute
 -----------------------------
 
-1) Get it:
+1) Install Bundler:
+
+    $ gem install bundler
+
+2) Clone Sammy Davis Junior:
 
     $ git clone git@github.com:kyledrake/sammy_davis_jr.git
 
-2) Modify Gemfile and environment.rb to your preference (or leave them alone).
+3) Modify Gemfile and environment.rb to your preference (or leave them alone).
 
-3) Install dependancies with Bundler:
+4) Install dependancies with Bundler:
 
     $ bundle install
-
-4) Copy to new folder (or git repository)
 
 5) Start the server:
 
     $ bundle exec rainbows
 
-6) That's it!
+That's it! Hit the app with your browser and you should see the stubbed index route.
 
 
 Is this a Microframework or a Boilerplate?
