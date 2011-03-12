@@ -37,7 +37,7 @@ Getting Started in One Minute
     $ bundle exec shotgun
     
     For production:
-    $ bundle exec rainbows
+    $ bundle exec rainbows -c rainbows_config.rb -E production
 
 That's it! Hit the app with your browser and you should see the stubbed index route.
 

@@ -44,6 +44,8 @@ GEM
     randexp (0.1.5)
       ParseTree
     sexp_processor (3.0.5)
+    shotgun (0.8)
+      rack (>= 1.0)
     sinatra (1.2.0)
       rack (~> 1.1)
       tilt (>= 1.2.2, < 2.0)
@@ -69,6 +71,7 @@ DEPENDENCIES
   dm-validations (= 1.0.2)
   rack-test (= 0.5.6)
   rainbows
+  shotgun
   sinatra (= 1.2.0)
   sinatra-namespace (= 0.6.1)
   yajl-ruby (= 0.8.1)
