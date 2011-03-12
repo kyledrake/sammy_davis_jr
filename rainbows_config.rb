@@ -1,4 +1,4 @@
-worker_processes 4 # assuming four CPU cores
+worker_processes 4 # Set this to the number of CPU cores in your system
 Rainbows! do
   case RUBY_VERSION[0..2]
     when '1.8' then use :ThreadSpawn
