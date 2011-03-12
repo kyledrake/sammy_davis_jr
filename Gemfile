@@ -16,3 +16,9 @@ group :test do
   gem 'contest',           '0.1.2'
   gem 'rack-test',         '0.5.6', :require => 'rack/test'
 end
+
+# Debugger for 1.8:
+# gem 'ruby-debug',                   :require => nil
+
+# Debugger for 1.9:
+# gem 'ruby-debug19',                 :require => nil
