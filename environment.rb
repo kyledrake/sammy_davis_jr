@@ -11,7 +11,6 @@ when :development
   DataMapper::Logger.new STDOUT, :debug
   DataMapper.setup :default, 'mysql://user:pass@localhost/database_dev'
 when :test
-  DataMapper.logger.level = :off
   DataMapper.setup :default, 'mysql://user:pass@localhost/database_test'
 when :production
   DataMapper.setup :default, 'mysql://user:pass@localhost/database'
