@@ -40,7 +40,7 @@ Getting Started in One Minute
 Is this a Microframework or a Boilerplate?
 ------------------------------------------
 
-I feel this is more of a boilerplate. To me, it's because this reminds me more of projects like the [HTML5 Boilerplate](http://html5boilerplate.com) than it does of a microframework. It's more of a glue that's designed to get you started in the right direction.
+This is a boilerplate, in the style of the [HTML5 Boilerplate](http://html5boilerplate.com). It's more of a glue that's designed to get you started in the right direction.
 
 I am happy to hear suggestions for how to improve things or deal with unforeseen problems.. please file any requests with issues (or send pull requests!).
 
