@@ -18,23 +18,23 @@ Highlights
 Getting Started in One Minute
 -----------------------------
 
-1) Get it:
+1. Get it:
 
     $ git clone git@github.com:kyledrake/sammy_davis_jr.git
 
-2) Modify Gemfile and environment.rb to your preference (or leave them alone).
+2. Modify Gemfile and environment.rb to your preference (or leave them alone).
 
-3) Install dependancies with Bundler:
+3. Install dependancies with Bundler:
 
     $ bundle install
 
-4) Copy to new folder (or git repository)
+4. Copy to new folder (or git repository)
 
-5) Start the server:
+5. Start the server:
 
     $ bundle exec rainbows
 
-6) That's it!
+6. That's it!
 
 
 Is this a Microframework or a Boilerplate?
