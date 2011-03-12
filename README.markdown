@@ -1,7 +1,7 @@
 Sammy Davis Junior
 ==================
 
-A simple, concise boilerplate for MVC/REST web development with Sinatra. Clocking in at 120 lines of code, it is the [Contest](http://blog.citrusbyte.com/2009/05/19/introducing-contest) of web development frameworks. Provides useful conventions without treating you like a child.
+A simple, concise boilerplate for MVC/REST web development with Sinatra. Clocking in at 120 lines of code, it is the [Contest](http://blog.citrusbyte.com/2009/05/19/introducing-contest) of web development. Provides useful conventions without treating you like a child.
 
 Sinatra was too basic for me, and Rails was too constraining. I wanted something that would provide a healthier balance between convention and creative expression. This boilerplate was the result. It is the ultimate expression of what I believe web development should be, philosophically collated through my decade of experience creating web applications. It encourages craftsmanship over conformity, only providing convention where it is truly useful, otherwise staying out of the way. Improvement without constraint.
 
