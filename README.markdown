@@ -8,7 +8,7 @@ Sinatra was too basic for me, and Rails was too constraining. I wanted something
 Highlights
 ----------
 
-* Configuration is handled by environment.rb, which is only 33 lines of code! Getting a console is actually this simple: bundle exec irb -r environment.rb
+* Configuration is handled by environment.rb, which is under 40 lines of code! Getting a console is actually this simple: bundle exec irb -r environment.rb
 * Uses Gemfile to manage dependencies with Bundler. Provides some defaults I prefer (such as DataMapper for models), but you can quickly change this if you'd like (that's the beauty of it!).
 * Integrated, ultra-simple testing boilerplate based on Test/Unit, Rack::Test and Contest. RSpec is too much! You shouldn't have to worry about your test framework. Running tests is straightforward: bundle exec ruby tests/controller\_tests.rb
 * One file for routes, controller.rb. I subscribe to Fat Models. For small to medium sized sites, you won't need to abstract routes into multiple files (but you can extend it to do this __very easily__ if you need to).
