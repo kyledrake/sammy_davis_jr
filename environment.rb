@@ -14,6 +14,7 @@ class Sinatra::Base
   configure :development do
     DataMapper::Logger.new STDOUT, :debug
     DataMapper.setup :default, 'mysql://user:pass@localhost/database_dev'
+    Bundler.require :development if development?
   end
 
   configure :test do

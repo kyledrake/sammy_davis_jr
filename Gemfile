@@ -11,14 +11,18 @@ gem 'sinatra-namespace', '0.6.1', :require => 'sinatra/namespace'
 gem 'rainbows',                   :require => nil
 gem 'shotgun',                    :require => nil
 
+group :development do
+  platforms :mri_18 do
+    gem 'ruby-debug'
+  end
+
+  platforms :mri_19 do
+    gem 'ruby-debug19', :require => 'ruby-debug'
+  end
+end
+
 group :test do
   gem 'dm-sweatshop',      '1.0.2'
   gem 'contest',           '0.1.2'
   gem 'rack-test',         '0.5.6', :require => 'rack/test'
 end
-
-# Debugger for 1.8:
-# gem 'ruby-debug',                   :require => nil
-
-# Debugger for 1.9:
-# gem 'ruby-debug19',                 :require => nil
