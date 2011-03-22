@@ -9,9 +9,10 @@ gem 'yajl-ruby',         '0.8.1', :require => 'yajl/json_gem'
 gem 'sinatra',           '1.2.0', :require => 'sinatra/base'
 gem 'sinatra-namespace', '0.6.1', :require => 'sinatra/namespace'
 gem 'rainbows',                   :require => nil
-gem 'shotgun',                    :require => nil
 
 group :development do
+  gem 'shotgun', :require => nil
+
   platforms :mri_18 do
     gem 'ruby-debug'
   end

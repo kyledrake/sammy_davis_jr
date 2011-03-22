@@ -3,6 +3,7 @@ case RUBY_VERSION[0..2]
   when '1.9' then Encoding.default_internal = 'UTF-8'
 end
 require 'rubygems'
+require 'bundler/setup'
 Bundler.require
 require File.join(File.expand_path(File.dirname(__FILE__)), 'controller.rb')
 require File.join(File.expand_path(File.dirname(__FILE__)), 'helpers.rb')
