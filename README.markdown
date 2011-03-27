@@ -1,4 +1,4 @@
-Sammy Davis Junior
+Sammy Davis Junior - Asynchronous edition with EventMachine and Thin
 ==================
 
 A simple, concise boilerplate for MVC/REST web development with Sinatra. Clocking in at 120 lines of code, it is the [Contest](http://blog.citrusbyte.com/2009/05/19/introducing-contest) of web development. Provides useful conventions without treating you like a child.
