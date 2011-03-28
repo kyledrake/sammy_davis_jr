@@ -11,6 +11,10 @@ gem 'sinatra-namespace', '0.6.1', :require => 'sinatra/namespace'
 gem 'async_sinatra',     '0.5.0', :require => 'sinatra/async'
 gem 'thin',              '1.2.10'
 
+# EM-Synchrony is an EventMachine power toy that allows you to do concurrent programming easily for some blocking operations.
+# This is fairly difficult to describe, so I won't make an attempt.. Consult other resources to understand what this is for.
+gem 'em-synchrony',      '0.2.0', :require => nil
+
 group :development do
   gem 'shotgun', :require => nil
 

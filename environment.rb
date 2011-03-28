@@ -5,7 +5,6 @@ end
 require 'rubygems'
 require 'bundler/setup'
 Bundler.require
-require File.join(File.expand_path(File.dirname(__FILE__)), 'controller.rb')
 require File.join(File.expand_path(File.dirname(__FILE__)), 'helpers.rb')
 Dir.glob(['lib', 'models'].map! {|d| File.join File.expand_path(File.dirname(__FILE__)), d, '*.rb'}).each {|f| require f}
 
@@ -37,5 +36,7 @@ class Sinatra::Base
   set :public, File.join(root, 'static')
   set :dump_errors, true
   helpers Helpers
-  register Sinatra::Namespace
+  register Sinatra::Namespace, Sinatra::Async
 end
+
+require File.join(File.expand_path(File.dirname(__FILE__)), 'controller.rb')
