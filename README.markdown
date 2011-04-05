@@ -48,7 +48,7 @@ This is a boilerplate, in the style of the [HTML5 Boilerplate](http://html5boile
 
 I am happy to hear suggestions for how to improve things or deal with unforeseen problems.. please file any requests with issues (or send pull requests!).
 
-I've heard Ruby doesn't scale very well.
+I've heard Ruby isn't very fast.
 ----------------------------------------
 
 __You've heard wrong__. "bundle exec rainbows -c rainbows\_config.rb -E production" on a quad-core i7 hackintosh, ruby 1.9.2p136. __4868 hits per second__:
