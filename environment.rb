@@ -1,7 +1,4 @@
-case RUBY_VERSION[0..2]
-  when '1.8' then $KCODE = "u"
-  when '1.9' then Encoding.default_internal = 'UTF-8'
-end
+Encoding.default_internal = 'UTF-8'
 require 'rubygems'
 require 'bundler/setup'
 Bundler.require
@@ -25,6 +22,7 @@ class Sinatra::Base
     DataMapper.setup :default, 'mysql://user:pass@localhost/database'
   end
 
+  use Rack::FiberPool
   use Rack::ShowExceptions if development?
   use Rack::MethodOverride
   use Rack::Session::Cookie, :key => 'sammy.session',
@@ -36,7 +34,7 @@ class Sinatra::Base
   set :public, File.join(root, 'static')
   set :dump_errors, true
   helpers Helpers
-  register Sinatra::Namespace, Sinatra::Async
+  register Sinatra::Namespace
 end
 
 require File.join(File.expand_path(File.dirname(__FILE__)), 'controller.rb')

@@ -1,7 +1,7 @@
 class Controller < Sinatra::Base
 
-  aget '/' do
-    body erb(:index)
+  get '/' do
+    erb :index
   end
 
 end
