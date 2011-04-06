@@ -25,16 +25,12 @@ class Sinatra::Base
   use Rack::FiberPool
   use Rack::ShowExceptions if development?
   use Rack::MethodOverride
-  use Rack::Session::Cookie, :key => 'sammy.session',
-                             :path => '/',
-                             :expire_after => 2592000, # In seconds
-                             :secret => 'PUT_SOMETHING_HERE'
-  set :static, true
-  set :root, File.expand_path(File.dirname(__FILE__))
-  set :public, File.join(root, 'static')
+  enable :sessions
+  set :session_secret, 'PUT SOMETHING HERE'
+  set :public, 'public'
   set :dump_errors, true
   helpers Helpers
   register Sinatra::Namespace
 end
 
-require File.join(File.expand_path(File.dirname(__FILE__)), 'controller.rb')
+require File.join('.', 'controller.rb')
