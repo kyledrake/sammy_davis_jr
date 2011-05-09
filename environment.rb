@@ -22,7 +22,7 @@ class Sinatra::Base
     DataMapper.setup :default, 'mysql://user:pass@localhost/database'
   end
 
-  use Rack::FiberPool
+  register Sinatra::Synchrony
   use Rack::ShowExceptions if development?
   use Rack::MethodOverride
   enable :sessions

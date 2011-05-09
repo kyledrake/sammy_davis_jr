@@ -4,13 +4,12 @@ gem 'dm-validations',    '1.1.0'
 gem 'dm-aggregates',     '1.1.0'
 gem 'dm-timestamps',     '1.1.0'
 gem 'dm-mysql-adapter',  '1.1.0'
-gem 'dm-migrations',     '1.1.0', :require => nil
-gem 'yajl-ruby',         '0.8.1', :require => 'yajl/json_gem'
-gem 'sinatra',           '1.2.0', :require => 'sinatra/base'
-gem 'sinatra-namespace', '0.6.1', :require => 'sinatra/namespace'
-gem 'thin',              '1.2.10'
-gem 'em-synchrony',      '0.2.0'
-gem 'rack-fiber_pool',   '0.9.1', :require => 'rack/fiber_pool'
+gem 'dm-migrations',     '1.1.0',  :require => nil
+gem 'yajl-ruby',         '0.8.2',  :require => 'yajl/json_gem'
+gem 'sinatra',           '1.2.6',  :require => 'sinatra/base'
+gem 'sinatra-namespace', '0.6.1',  :require => 'sinatra/namespace'
+gem 'sinatra-synchrony',           :require => 'sinatra/synchrony'
+gem 'thin',              '1.2.11', :require => nil
 
 group :development do
   gem 'shotgun',      :require => nil
