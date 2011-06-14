@@ -9,7 +9,7 @@ gem 'yajl-ruby',           '0.8.2',  :require => 'yajl/json_gem'
 gem 'sinatra',             '1.2.6',  :require => 'sinatra/base'
 gem 'sinatra-namespace',   '0.6.1',  :require => 'sinatra/namespace'
 gem 'sinatra-synchrony',   '0.0.3',  :require => 'sinatra/synchrony'
-gem 'thin',                '1.2.11', :require => nil
+gem 'thin',                '1.2.11'
 gem 'rake',                '0.9.2',  :require => nil
 
 group :development do
