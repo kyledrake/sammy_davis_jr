@@ -10,12 +10,12 @@ puts "Starting in #{Sinatra::Base.environment} mode.."
 class Sinatra::Base
   register Sinatra::Synchrony
   register Sinatra::Namespace
-  
+
   set :method_override, true
   set :public,          'public'
   set :sessions,        true
   set :session_secret,  'PUT SOMETHING HERE'
-  
+
   configure :development do
     Bundler.require :development
     DataMapper::Logger.new STDOUT, :debug

@@ -34,13 +34,13 @@ Getting Started in One Minute
     $ bundle install
 
 5) Start the server:
-    
+
     For development:
     $ bundle exec rackup -s thin
-    
+
     For development, app reloads automatically:
     $ bundle exec shotgun -s thin -P public
-    
+
     For production:
     $ bundle exec thin start -e production
     Look at the documentation for thin's command line. You can configure for multiple workers, etc..
