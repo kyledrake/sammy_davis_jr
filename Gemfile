@@ -10,6 +10,7 @@ gem 'sinatra',             '1.2.6',  :require => 'sinatra/base'
 gem 'sinatra-namespace',   '0.6.1',  :require => 'sinatra/namespace'
 gem 'sinatra-synchrony',   '0.0.3',  :require => 'sinatra/synchrony'
 gem 'thin',                '1.2.11', :require => nil
+gem 'rake',                '0.9.2',  :require => nil
 
 group :development do
   gem 'shotgun',      :require => nil

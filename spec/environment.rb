@@ -1,18 +1,14 @@
 ENV['RACK_ENV'] = 'test'
 raise 'Forget it.' if ENV['RACK_ENV'] == 'production'
 require File.join(File.expand_path(File.dirname(__FILE__)), '..', 'environment.rb')
-require 'minitest/spec'
+require 'minitest/autorun'
 require 'wrong/adapters/minitest'
 Wrong.config.alias_assert :expect_that
 Bundler.require :test
 require File.join(File.expand_path(File.dirname(__FILE__)), 'fixtures.rb')
 
-class Test::Unit::TestCase
-  include Rack::Test::Methods
-  def mock_app(base=Sinatra::Base, &block); @app = Sinatra.new(base, &block) end
-  def app; @app end
-  def app=(new_app); @app = new_app end
-end
+def mock_app(base=Sinatra::Base, &block); @app = Sinatra.new(base, &block) end
+def app=(new_app); @app = new_app end
 
 =begin
 def file_upload_hash
