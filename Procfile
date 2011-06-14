@@ -1,1 +1,1 @@
-web: thin start -p $PORT
+web: thin start -e production -p $PORT
