@@ -8,29 +8,27 @@ Dir.glob(['lib', 'models'].map! {|d| File.join File.expand_path(File.dirname(__F
 puts "Starting in #{Sinatra::Base.environment} mode.."
 
 class Sinatra::Base
+  register Sinatra::Synchrony
+  register Sinatra::Namespace
+  
+  set :method_override, true
+  set :public,          'public'
+  set :sessions,        true
+  set :session_secret,  'PUT SOMETHING HERE'
+  
   configure :development do
+    Bundler.require :development
     DataMapper::Logger.new STDOUT, :debug
-    DataMapper.setup :default, 'mysql://user:pass@localhost/database_dev'
-    Bundler.require :development if development?
+    DataMapper.setup :default, 'postgres://user:pass@localhost/database_dev'
   end
 
   configure :test do
-    DataMapper.setup :default, 'mysql://user:pass@localhost/database_test'
+    DataMapper.setup :default, 'postgres://user:pass@localhost/database_test'
   end
 
   configure :production do
-    DataMapper.setup :default, 'mysql://user:pass@localhost/database'
+    DataMapper.setup :default, 'postgres://user:pass@localhost/database'
   end
-
-  register Sinatra::Synchrony
-  use Rack::ShowExceptions if development?
-  use Rack::MethodOverride
-  enable :sessions
-  set :session_secret, 'PUT SOMETHING HERE'
-  set :public, 'public'
-  set :dump_errors, true
-  helpers Helpers
-  register Sinatra::Namespace
 end
 
 require File.join('.', 'controller.rb')

@@ -1,7 +1,9 @@
 ENV['RACK_ENV'] = 'test'
 raise 'Forget it.' if ENV['RACK_ENV'] == 'production'
 require File.join(File.expand_path(File.dirname(__FILE__)), '..', 'environment.rb')
-require 'test/unit'
+require 'minitest/spec'
+require 'wrong/adapters/minitest'
+Wrong.config.alias_assert :expect_that
 Bundler.require :test
 require File.join(File.expand_path(File.dirname(__FILE__)), 'fixtures.rb')
 

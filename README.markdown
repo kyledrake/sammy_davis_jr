@@ -12,7 +12,7 @@ Highlights
 * Uses Gemfile to manage dependencies with Bundler. Provides some defaults I prefer (such as DataMapper for models), but you can quickly change this if you'd like (that's the beauty of it!).
 * Integrated, ultra-simple testing boilerplate based on Test/Unit, Rack::Test and Contest. RSpec is too much! You shouldn't have to worry about your test framework. Running tests is straightforward: bundle exec ruby tests/controller\_tests.rb
 * One file for routes, controller.rb. I subscribe to [Fat Models](http://weblog.jamisbuck.org/2006/10/18/skinny-controller-fat-model). For small to medium sized sites, you won't need to abstract routes into multiple files (but you can extend it to do this __very easily__ if you need to).
-* Support for Ruby 1.8 and 1.9! Forces UTF-8 for both.
+* UTF-8, out of the box.
 
 Getting Started in One Minute
 -----------------------------
