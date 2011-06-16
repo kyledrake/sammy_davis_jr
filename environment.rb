@@ -7,7 +7,7 @@ Dir.glob(['lib', 'models'].map! {|d| File.join File.expand_path(File.dirname(__F
 
 puts "Starting in #{Sinatra::Base.environment} mode.."
 
-class Sinatra::Base
+class Controller < Sinatra::Base
   register Sinatra::Synchrony
   register Sinatra::Namespace
 
