@@ -10,11 +10,13 @@ puts "Starting in #{Sinatra::Base.environment} mode.."
 class Controller < Sinatra::Base
   register Sinatra::Synchrony
   register Sinatra::Namespace
+  register Sinatra::Flash
 
   set :method_override, true
   set :public,          'public'
   set :sessions,        true
   set :session_secret,  'PUT SOMETHING HERE'
+  set :erubis,          :escape_html => true
 
   configure :development do
     Bundler.require :development
