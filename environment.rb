@@ -28,16 +28,12 @@ class Controller < Sinatra::Base
   configure :development do
     use Rack::CommonLogger
     Bundler.require :development
-    DataMapper::Logger.new STDOUT, :debug
-    DataMapper.setup :default, 'postgres://user:pass@localhost/database_dev'
   end
 
   configure :test do
-    DataMapper.setup :default, 'postgres://user:pass@localhost/database_test'
   end
 
   configure :production do
-    DataMapper.setup :default, 'postgres://user:pass@localhost/database'
   end
 
   not_found do
