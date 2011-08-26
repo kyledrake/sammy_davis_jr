@@ -34,5 +34,9 @@ class Sinatra::Base
          return false;
         }
     end
+
+    def partial(page, options={})
+      erb page, options.merge!(:layout => false)
+    end
   end
 end

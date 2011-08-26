@@ -8,7 +8,7 @@ Sinatra was too basic for me, and Rails was too constraining. I wanted something
 Highlights
 ----------
 
-* Asynchronous with [sinatra-synchrony](http://github.com/kyledrake/sinatra-synchrony)! Read more about how this works and why it's good for you.
+* Asynchronous with [sinatra-synchrony](http://github.com/kyledrake/sinatra-synchrony)! Read more about how this works and why it's almost always good for you.
 * Configuration is handled by environment.rb, which is under 40 lines of code! Getting a console is actually this simple: bundle exec irb -r environment.rb
 * Uses [RVM](https://rvm.beginrescueend.com) to ensure Ruby 1.9.2 is used.
 * Uses [Gemfile](http://gembundler.com/man/gemfile.5.html) to manage dependencies with [Bundler](http://gembundler.com). Provides some defaults I prefer (such as [DataMapper](http://datamapper.org) for models), but you can quickly change this if you'd like (that's the beauty of this approach!).
@@ -115,4 +115,4 @@ __You've heard wrong__. It's quite fast. And with the help of [EventMachine](htt
       99%     73
      100%     77 (longest request)
 
-Running this benchmark occasionally stalls out sockets in Mac OSX because of its buggy networking stack (and/or a bad configuration on my part), but it runs perfectly in Linux. I highly recommend using Linux or Free/Net/Open BSD systems for production applications.
+Running this benchmark occasionally stalls out sockets in Mac OSX because of its buggy networking stack, but it runs perfectly in Linux. I highly recommend using Linux or Free/Net/Open BSD systems for production applications.
