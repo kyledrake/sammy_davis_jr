@@ -1,10 +1,4 @@
 source :rubygems
-gem 'dm-core',             '1.1.0'
-gem 'dm-validations',      '1.1.0'
-gem 'dm-aggregates',       '1.1.0'
-gem 'dm-timestamps',       '1.1.0'
-gem 'dm-postgres-adapter', '1.1.0'
-gem 'dm-migrations',       '1.1.0', :require => nil
 gem 'erubis',              '2.7.0'
 gem 'thin',                '1.2.11'
 gem 'faraday',             '0.7.4'
@@ -23,7 +17,6 @@ end
 
 group :test do
   gem 'rack-test',         '0.5.6', :require => 'rack/test'
-  gem 'dm-sweatshop',      '1.1.0'
   gem 'wrong',             '0.5.0'
   gem 'webmock',           '1.7.4'
 end

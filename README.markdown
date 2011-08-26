@@ -11,7 +11,7 @@ Highlights
 * Asynchronous with [sinatra-synchrony](http://github.com/kyledrake/sinatra-synchrony)! Read more about how this works and why it's almost always good for you.
 * Configuration is handled by environment.rb, which is under 40 lines of code! Getting a console is actually this simple: bundle exec irb -r environment.rb
 * Uses [RVM](https://rvm.beginrescueend.com) to ensure Ruby 1.9.2 is used.
-* Uses [Gemfile](http://gembundler.com/man/gemfile.5.html) to manage dependencies with [Bundler](http://gembundler.com). Provides some defaults I prefer (such as [DataMapper](http://datamapper.org) for models), but you can quickly change this if you'd like (that's the beauty of this approach!).
+* Uses [Gemfile](http://gembundler.com/man/gemfile.5.html) to manage dependencies with [Bundler](http://gembundler.com). Provides some defaults I prefer, but you can quickly change them if you'd like (that's the beauty of this approach!).
 * Integrated, ultra-simple testing boilerplate based on [Minitest::Spec](http://bfts.rubyforge.org/minitest/MiniTest/Spec.html), [Rack::Test](http://www.sinatrarb.com/testing.html) and [Wrong](http://github.com/sconover/wrong). I found RSpec to be too slow and complex, but you can use it here with a few easy modifications. Running tests is straightforward, you can run each *_spec.rb file separately, or run them all at once: bundle exec rake test
 * One file for routes, controller.rb. I subscribe to [Fat Models](http://weblog.jamisbuck.org/2006/10/18/skinny-controller-fat-model). For small to medium sized sites, you won't need to abstract routes into multiple files (but you can extend it to do this __very easily__ if you need to).
 * UTF-8, out of the box.
