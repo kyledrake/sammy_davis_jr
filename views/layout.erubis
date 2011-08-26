@@ -24,7 +24,7 @@
       </script>
     <![endif]-->
 
-    <% if GA_ID %>
+    <% if defined?(GA_ID) %>
       <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', '<%= SiteConfig.google_analytics.id %>']);
@@ -36,6 +36,7 @@
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
       </script>
+    <% end %>
   </head>
   <body>
     <%== yield %>
