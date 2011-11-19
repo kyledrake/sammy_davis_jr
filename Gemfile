@@ -9,6 +9,7 @@ gem 'sinatra-synchrony',   '0.2.0.beta.1', :require => 'sinatra/synchrony'
 gem 'sinatra-flash',       '0.3.0', :require => 'sinatra/flash'
 gem 'rake',                '0.9.2', :require => nil
 gem 'dalli',               '1.0.5', :require => nil
+gem 'geoloqi'
 
 group :development do
   gem 'shotgun',      :require => nil
