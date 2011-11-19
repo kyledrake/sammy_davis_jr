@@ -8,7 +8,6 @@ Dir.glob(['lib', 'models'].map! {|d| File.join File.expand_path(File.dirname(__F
 puts "Starting in #{Sinatra::Base.environment} mode.."
 
 class Controller < Sinatra::Base
-  register Sinatra::Synchrony
   register Sinatra::Namespace
   register Sinatra::Flash
 
@@ -19,8 +18,6 @@ class Controller < Sinatra::Base
   set :sessions,        true
   set :session_secret,  'PUT SOMETHING HERE'
   set :erubis,          :escape_html => true
-
-  Faraday.default_adapter = :em_synchrony
 
   # async-aware Memcache client
   # Cache = Dalli::Client.new '127.0.0.1:11211', :async => true
