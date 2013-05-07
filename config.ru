@@ -1,5 +1,3 @@
-require File.join(File.expand_path(File.dirname(__FILE__)), 'environment.rb')
+require File.join File.dirname(__FILE__), 'config', 'config'
 
-map '/' do
-  run Controller
-end
+map('/')              { run IndexController }

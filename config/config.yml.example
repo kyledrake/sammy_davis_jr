@@ -1,0 +1,10 @@
+---
+development:
+  database: 'postgres://127.0.0.1/database'
+  session_secret: dsfsdfsfd
+test:
+  database: 'postgres://127.0.0.1/database_test'
+  session_secret: dsfsdfsfd
+production:
+  database: 'postgres://127.0.0.1/database_production'
+  session_secret: dsfsdfsfd
